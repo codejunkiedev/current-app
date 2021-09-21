@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import React, { useState, useEffect } from 'react'
 import { StyleSheet, Text, View, TextInput, Dimensions, KeyboardAvoidingView, ImageBackground, Image } from 'react-native'
 import SplashScreen from 'react-native-splash-screen'
@@ -15,6 +16,8 @@ const LoginScreen = () => {
     useEffect(() => {
         SplashScreen.hide();
     }, []);
+
+    const navigation = useNavigation()
 
     return (
         <ImageBackground source={require('../../assets/Images/bg.png')} resizeMode="cover" style={styles.image}>
@@ -39,7 +42,7 @@ const LoginScreen = () => {
                     onFocus={() => setIsPassword(true)}
                 />
                 <View style={styles.buttonContainer}>
-                    <AppButton title="Login" />
+                    <AppButton title="Login" onPress={() => navigation.navigate("GalleryScreen")} />
                 </View>
             </KeyboardAvoidingView>
         </ImageBackground>

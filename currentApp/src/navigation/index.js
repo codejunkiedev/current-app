@@ -20,12 +20,17 @@ function MainRouter() {
             <Stack.Navigator
                 initialRouteName="LoginScreen"
             >
-                {/* <Stack.Screen name="Current App" component={GalleryScreen} /> */}
                 <Stack.Screen
-                    name="Login Screen"
+                    name="GalleryScreen"
+                    component={GalleryScreen}
+                    options={{ title: 'Current App' }}
+                />
+                <Stack.Screen
+                    name="LoginScreen"
                     component={LoginScreen}
                     options={{ headerShown: false }}
                 />
+
             </Stack.Navigator>
         </NavigationContainer>
     );
