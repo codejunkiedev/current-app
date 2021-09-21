@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'rea
 import AppButton from './AppButton'
 const { width, height } = Dimensions.get("window")
 const ImageCard = (props) => {
-    const [selectImage, setSelectImage] = useState(false)
+    const [selectImage, setSelectImage] = useState(props.selected)
     console.log(selectImage)
     return (
         <View styles={styles.container}>
@@ -13,8 +13,8 @@ const ImageCard = (props) => {
 
                 <TouchableOpacity
                 activeOpacity={0.8}
-                 style={styles.pressable} onPress={()=> setSelectImage(props.onPress)}>
-                    <Text style={styles.title}>ADD  +</Text>
+                 style={styles.pressable} onPress={props.onPress}>
+                    <Text style={styles.title}>{props.selected?"ADDED":"ADD  +"}</Text>
                 </TouchableOpacity>
 
 
