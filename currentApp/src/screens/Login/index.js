@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, View, TextInput, Dimensions, KeyboardAvoidingView, ImageBackground } from 'react-native'
+import { StyleSheet, Text, View, TextInput, Dimensions, KeyboardAvoidingView, ImageBackground, Image } from 'react-native'
 import SplashScreen from 'react-native-splash-screen'
 
 import AppButton from '../../components/AppButton'
@@ -23,7 +23,9 @@ const LoginScreen = () => {
                 style={styles.container}
             >
 
-
+                <View style={{ marginBottom: height * 0.08 }}>
+                    <Image resizeMode="contain" style={{ width: width * 0.8, height: 30 }} source={require('../../assets/Images/logo.png')} />
+                </View>
                 <TextInput
                     style={[styles.input, { borderColor: isUserName ? "#031433" : "#ddd" }]}
                     placeholder="Username"
@@ -67,6 +69,6 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         width: width * 0.8,
-        marginTop: height * 0.1
+        marginTop: height * 0.08
     }
 })

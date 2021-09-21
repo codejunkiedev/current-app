@@ -18,9 +18,9 @@ function MainRouter() {
     return (
         <NavigationContainer>
             <Stack.Navigator
-                initialRouteName="GalleryScreen"
+                initialRouteName="LoginScreen"
             >
-                <Stack.Screen name="Current App" component={GalleryScreen} />
+                {/* <Stack.Screen name="Current App" component={GalleryScreen} /> */}
                 <Stack.Screen
                     name="Login Screen"
                     component={LoginScreen}
