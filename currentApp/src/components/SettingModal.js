@@ -14,7 +14,7 @@ const SettingModal = () => {
     const [currentId, setCurrentId] = useState('');
     const [modalVisible, setModalVisible] = useState(true);
     const [isEnabled, setIsEnabled] = useState(false);
-    const [amAndPmSelected, setAmAndPmSelected] = useState(false)
+    const [amAndPmSelected, setAmAndPmSelected] = useState(moment().format('h:mm') == "am" ? false : true)
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     console.log("switch button", isEnabled)
 
