@@ -13,6 +13,7 @@ import CameraRoll from "@react-native-community/cameraroll";
 import moment from "moment";
 import ImageCard from '../../components/ImageCard';
 import AppButton from '../../components/AppButton';
+import SettingModal from '../../components/SettingModal';
 
 const {height, width} = Dimensions.get('window');
 const IMAGE_DATA = [
@@ -126,6 +127,7 @@ const GalleryScreen = () => {
         }}>
         <AppButton onPress={removeImage} title="Delete" />
       </View>
+      <SettingModal />
     </SafeAreaView>
   );
 };

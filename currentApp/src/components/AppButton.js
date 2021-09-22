@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     title: {
         textAlign: 'center',
         padding: 15,
-        color: '#fff'
+        color: '#fff',
+        fontWeight: 'bold'
     }
 })
