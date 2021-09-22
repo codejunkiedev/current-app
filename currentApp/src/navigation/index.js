@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import GalleryScreen from '../screens/Gallery';
-import LoginScreen from '../screens/Gallery';
+import LoginScreen from '../screens/Login';
 
 function HomeScreen() {
     return (
@@ -17,9 +17,20 @@ const Stack = createStackNavigator();
 function MainRouter() {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Current App" component={GalleryScreen} />
-                <Stack.Screen name="Login Screen" component={LoginScreen} />
+            <Stack.Navigator
+                initialRouteName="LoginScreen"
+            >
+                <Stack.Screen
+                    name="GalleryScreen"
+                    component={GalleryScreen}
+                    options={{ title: 'Current App' }}
+                />
+                <Stack.Screen
+                    name="LoginScreen"
+                    component={LoginScreen}
+                    options={{ headerShown: false }}
+                />
+
             </Stack.Navigator>
         </NavigationContainer>
     );
