@@ -14,14 +14,14 @@ const SettingModal = () => {
     const [currentId, setCurrentId] = useState('');
     const [modalVisible, setModalVisible] = useState(true);
     const [isEnabled, setIsEnabled] = useState(false);
-    const [amAndPmSelected, setAmAndPmSelected] = useState(moment().format('h:mm') == "am" ? false : true)
+    const [amAndPmSelected, setAmAndPmSelected] = useState(moment().format('a') == "am" ? false : true)
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     console.log("switch button", isEnabled)
 
 
     // var today = new Date();
     // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var time = moment().format('h:mm');
+    var time = moment().format('a');
     // var dateWithouthSecond = new Date();
     // var time = dateWithouthSecond.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
